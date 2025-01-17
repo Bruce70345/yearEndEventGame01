@@ -1,0 +1,680 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #5858B9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: Roboto Condensed;
+}
+
+
+
+html .swal2-container,
+body .swal2-container {
+  z-index: 1;
+}
+
+html .bgBanner,
+body .bgBanner {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0 5rem; */
+  background-color: #343BAA;
+}
+
+html .bgBanner .leftFixDiv,
+body .bgBanner .leftFixDiv,
+html .bgBanner .rightFixDiv,
+body .bgBanner .rightFixDiv {
+  display: none;
+  padding: 0 5rem;
+}
+
+html .bgBanner .leftFixDiv h3,
+body .bgBanner .leftFixDiv h3 {
+  text-align: left;
+  font: normal normal bold 72px/72px Roboto Condensed;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  word-wrap: break-word;
+}
+
+html .bgBanner .rightFixDiv h4,
+body .bgBanner .rightFixDiv h4 {
+  text-align: left;
+  font: normal normal bold 32px/32px Roboto Condensed;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  margin-bottom: 0px;
+}
+
+html .bgBanner .rightFixDiv h2,
+body .bgBanner .rightFixDiv h2 {
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal bold 72px/72px Roboto Condensed;
+  letter-spacing: 0px;
+  color: #FF00BA;
+  opacity: 1;
+  margin-top: 0px;
+}
+
+html .box,
+body .box {
+  width: 542px;
+  height: 554px;
+  position: relative;
+  border-radius: 50%;
+  z-index: 500;
+  /*overflow: hidden;*/
+  /*----- 歷史紀錄 ------*/
+}
+
+html .box .sessionText,
+body .box .sessionText {
+  position: absolute;
+  top: -5rem;
+  left: -10rem;
+  z-index: 300;
+}
+
+html .box .sessionText span,
+body .box .sessionText span {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+html .box .sessionText p,
+body .box .sessionText p {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 150px;
+  height: 150px;
+  overflow: auto;
+}
+
+html .box .bgImg,
+body .box .bgImg {
+  width: 542px;
+  height: 554px;
+  border-radius: 50%;
+  z-index: 350;
+  position: relative;
+  overflow: hidden;
+}
+
+html .box .arrow,
+body .box .arrow {
+  width: 542px;
+  height: 554px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 500;
+}
+
+html .box .arrow .arrowIcon,
+body .box .arrow .arrowIcon {
+  width: 130px;
+  height: 210px;
+  background-image: url(https://img.onl/QXLDZD);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 400;
+  position: absolute;
+  top: 138px;
+  left: 208px;
+}
+
+html .box .arrow .centerText,
+body .box .arrow .centerText {
+  z-index: 99999;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 150px solid #1F1172;
+  /* color: #FF00BA; */
+  color: #fff;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+html .box .arrow .centerText::after,
+body .box .arrow .centerText::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  width: max-content;
+}
+
+html .box .arrow .centerText:hover,
+body .box .arrow .centerText:hover {
+  border-bottom-color: #FF00BA;
+  color: #fff;
+}
+
+html .box .sector,
+body .box .sector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  overflow: hidden;
+}
+
+html .box .sector::before,
+body .box .sector::before {
+  content: "";
+  width: 270px;
+  height: 540px;
+  position: absolute;
+  transform-origin: right center;
+  transform: rotate(40deg);
+}
+
+html .box .sector .textGroup,
+body .box .sector .textGroup {
+  transform: rotate(20deg);
+  height: 50%;
+  padding-top: 5%;
+  padding-left: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.headline {
+  font-size: 48px;
+  color: #fff;
+  position: absolute;
+  top: -30%;
+  left: 0%;
+  width: fit-content;
+}
+
+html .box .sector .textGroup p,
+body .box .sector .textGroup p {
+  margin: 0;
+  padding: 0;
+  font-size: 72px;
+}
+
+html .box .sector .textGroup span,
+body .box .sector .textGroup span {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: .75;
+}
+
+/* html .box .sector:nth-child(odd)::before,
+body .box .sector:nth-child(odd)::before {
+  background-color: #F0BEFF;
+}
+
+html .box .sector:nth-child(odd) .textGroup,
+body .box .sector:nth-child(odd) .textGroup {
+  color: #343BAA;
+}
+
+html .box .sector:nth-child(even)::before,
+body .box .sector:nth-child(even)::before {
+  background-color: #343BAA;
+}
+
+html .box .sector:nth-child(even) .textGroup,
+body .box .sector:nth-child(even) .textGroup {
+  color: #F0BEFF;
+} */
+
+html .box .sector:nth-child(3n+1)::before,
+body .box .sector:nth-child(3n+1)::before {
+  background-color: #F0BEFF;
+  /* 第一種顏色 */
+}
+
+html .box .sector:nth-child(3n+1) .textGroup,
+body .box .sector:nth-child(3n+1) .textGroup {
+  color: #343BAA;
+  /* 與背景對比的字體顏色 */
+}
+
+html .box .sector:nth-child(3n+2)::before,
+body .box .sector:nth-child(3n+2)::before {
+  background-color: #343BAA;
+  /* 第二種顏色 */
+}
+
+html .box .sector:nth-child(3n+2) .textGroup,
+body .box .sector:nth-child(3n+2) .textGroup {
+  color: #F0BEFF;
+  /* 與背景對比的字體顏色 */
+}
+
+html .box .sector:nth-child(3n)::before,
+body .box .sector:nth-child(3n)::before {
+  background-color: #A9A9FF;
+  /* 柔和的紫藍色，與其他兩種顏色相近 */
+}
+
+html .box .sector:nth-child(3n) .textGroup,
+body .box .sector:nth-child(3n) .textGroup {
+  color: #FFFFFF;
+  /* 與背景對比的字體顏色 */
+}
+
+
+
+/* html .box .sector-1,
+body .box .sector-1 {
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+html .box .sector-2,
+body .box .sector-2 {
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+html .box .sector-3,
+body .box .sector-3 {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+html .box .sector-4,
+body .box .sector-4 {
+  transform: translate(-50%, -50%) rotate(150deg);
+}
+
+html .box .sector-5,
+body .box .sector-5 {
+  transform: translate(-50%, -50%) rotate(210deg);
+}
+
+html .box .sector-6,
+body .box .sector-6 {
+  transform: translate(-50%, -50%) rotate(270deg);
+} */
+
+html .box .sector-1 {
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+html .box .sector-2 {
+  transform: translate(-50%, -50%) rotate(20deg);
+}
+
+html .box .sector-3 {
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+html .box .sector-4 {
+  transform: translate(-50%, -50%) rotate(100deg);
+}
+
+html .box .sector-5 {
+  transform: translate(-50%, -50%) rotate(140deg);
+}
+
+html .box .sector-6 {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+html .box .sector-7 {
+  transform: translate(-50%, -50%) rotate(220deg);
+}
+
+html .box .sector-8 {
+  transform: translate(-50%, -50%) rotate(260deg);
+}
+
+html .box .sector-9 {
+  transform: translate(-50%, -50%) rotate(300deg);
+}
+
+
+html .box .chooseSector::before,
+body .box .chooseSector::before {
+  background-color: #FF00BA !important;
+}
+
+html .box .chooseSector .textGroup,
+body .box .chooseSector .textGroup {
+  color: #fff !important;
+}
+
+.aniRotate {
+  animation-name: rotate;
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ab1b3d;
+  /* 主背景紅色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: Roboto Condensed;
+}
+
+html .bgBanner,
+body .bgBanner {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b91612;
+  /* 橙紅色背景 */
+}
+
+html .bgBanner .leftFixDiv h3,
+body .bgBanner .leftFixDiv h3 {
+  text-align: left;
+  font: normal normal bold 72px/72px Roboto Condensed;
+  color: #ffd021;
+  /* 金色字體 */
+}
+
+html .bgBanner .rightFixDiv h4,
+body .bgBanner .rightFixDiv h4 {
+  text-align: left;
+  font: normal normal bold 32px/32px Roboto Condensed;
+  color: #faf8f5;
+  /* 白色字體 */
+}
+
+html .bgBanner .rightFixDiv h2,
+body .bgBanner .rightFixDiv h2 {
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal bold 72px/72px Roboto Condensed;
+  color: #faf791;
+  /* 明亮黃色字體 */
+}
+
+html .box .arrow .centerText:hover,
+body .box .arrow .centerText:hover {
+  border-bottom-color: #ffd021;
+  /* 金色三角形 */
+}
+
+html .box .sector:nth-child(3n+1)::before,
+body .box .sector:nth-child(3n+1)::before {
+  background-color: #e5463D;
+  /* 深橙紅色 */
+}
+
+html .box .sector:nth-child(3n+1) .textGroup,
+body .box .sector:nth-child(3n+1) .textGroup {
+  color: #faf8f5;
+  /* 白色字體 */
+}
+
+html .box .sector:nth-child(3n+2)::before,
+body .box .sector:nth-child(3n+2)::before {
+  background-color: #f78a7f;
+  /* 粉紅色 */
+}
+
+html .box .sector:nth-child(3n+2) .textGroup,
+body .box .sector:nth-child(3n+2) .textGroup {
+  color: #ab1b3d;
+  /* 主紅色字體 */
+}
+
+html .box .sector:nth-child(3n)::before,
+body .box .sector:nth-child(3n)::before {
+  background-color: #98d2d2;
+  /* 淡藍色 */
+}
+
+html .box .sector:nth-child(3n) .textGroup,
+body .box .sector:nth-child(3n) .textGroup {
+  color: #ab1b3d;
+  /* 主紅色字體 */
+}
+
+html .box .chooseSector::before,
+body .box .chooseSector::before {
+  background-color: #ffd021 !important;
+  /* 金色 */
+}
+
+html .box .chooseSector .textGroup,
+body .box .chooseSector .textGroup {
+  color: #faf8f5 !important;
+  /* 白色字體 */
+}
+
+
+#zero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#Chou {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#BigMac {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#AIMEI {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#KeLeGuo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#Kentucky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#PAPAMAI {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#WinStock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+#Peanut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+.lotteryVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 確保視頻保持比例並覆蓋整個區域 */
+  z-index: 750;
+  display: none;
+}
+
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  color: #343BAA;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
